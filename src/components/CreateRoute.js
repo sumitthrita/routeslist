@@ -100,7 +100,7 @@ const CreateRoute = props => {
                 route.stops = []
             }
             if(props.source === "update"){
-                dispatch(updateRoute(props.routeIndex, route))
+                dispatch(updateRoute(route.id ,route))
             } else if(props.source === "create"){
                 dispatch(addRoute(route))
             }
@@ -301,7 +301,7 @@ const CreateRoute = props => {
                 {props.source === "create" ?
                     null
                 :
-                    <Button label="Delete" handleMe={() =>  props.deleteRoute(props.routeIndex, "modal")} />}
+                    <Button label="Delete" handleMe={() =>  props.deleteRoute(route.id, "modal")} />}
                 {props.source === "create" ?
                     null
                 :

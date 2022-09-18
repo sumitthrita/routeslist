@@ -14,9 +14,9 @@ export const addRoute = (route) => {
     }
 }
 
-export const deleteRoute = (index, source) => {
+export const deleteRoute = (id, source) => {
     let routes = [...JSON.parse(store.getState().routeReducer.routes)]
-    routes.splice(index, 1)
+    routes.splice(routes.findIndex(e => e.id === id), 1)
     return dispatch => {
         dispatch({
             type: DELETE_ROUTE,
@@ -29,9 +29,9 @@ export const deleteRoute = (index, source) => {
     }
 }
 
-export const updateRoute = (index, route) => {
+export const updateRoute = (id, route) => {
     const routes = [...JSON.parse(store.getState().routeReducer.routes)]
-    routes[index] = route
+    routes[routes.findIndex(e => e.id === id)] = route
     return dispatch => {
         dispatch({
             type: UPDATE_ROUTE,

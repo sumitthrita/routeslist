@@ -458,6 +458,14 @@ input:focus {
   cursor: pointer;
 }
 
+.routelist_each_row_item.each_row_6 svg{
+  color: #EB1D36;
+}
+
+.routelist_each_row_item.each_row_4 svg {
+  color: #FA9494;
+}
+
 .noStopMessage span {
   color: #EB1D36;
 }
@@ -469,4 +477,8 @@ input:focus {
 .no_list_message span {
   cursor: pointer;
   color: #EB1D36;
+}
+
+.no_list_message {
+  margin-top: 24px;
 }

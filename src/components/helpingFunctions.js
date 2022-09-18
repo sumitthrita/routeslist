@@ -1,3 +1,4 @@
+import store from "../Redux/store"
 export const handleEvent = (id, type) => {
     const el = document.getElementById(id)
     if(type === "click"){
@@ -12,8 +13,9 @@ export const handleEvent = (id, type) => {
 }
 
 export const emptyRoute = () => {
+    let routes = [...JSON.parse(store.getState().routeReducer.routes)]
     return {
-        id: 1,
+        id: routes.length+1,
         name: "",
         status : "Active",
         direction : "UP",
