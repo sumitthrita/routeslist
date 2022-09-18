@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteRoute, showGeneralModalAction } from '../Redux/action';
 import CreateRoute from './CreateRoute';
-import ViewMap from './ViewMap';
+import Map from './Map';
 
 function usePrevious (value) {
     const ref = useRef();
@@ -83,12 +83,13 @@ const RouteList = props => {
 
     const viewMap = (route) => {
         setSearchString("")
-        let component = <ViewMap route={route} />
+        let component = <Map route={route} />
         const toSend = {
             component, 
-            title: "Route",
+            title: route.name,
             showModal: true,
-            handleClose: closeModal
+            handleClose: closeModal,
+            className: "forMap"
           }
         dispatch(showGeneralModalAction(toSend))
     }

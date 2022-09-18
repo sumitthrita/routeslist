@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { addRoute, showGeneralModalAction, updateRoute } from '../Redux/action';
-import AddStops from './AddStops';
 import Button from './Button';
 import { emptyRoute, handleEvent } from './helpingFunctions';
 import { faCircleXmark, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ViewMap from './ViewMap';
+import Map from './Map';
 
 const CreateRoute = props => {
     const [editable, setEditable] = useState(false)
@@ -73,7 +72,7 @@ const CreateRoute = props => {
     }
 
     const handleViewMap = () => {
-        let component = <ViewMap route={route} />
+        let component = <Map route={route} />
         const toSend = {
             component, 
             title: "Route",
