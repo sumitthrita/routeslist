@@ -126,7 +126,7 @@ const Map = props => {
             route.stops.forEach(stop => {
                 destinations.push({lat: parseFloat(stop.latitude), lng: parseFloat(stop.longitude)})
                 addMarker([parseFloat(stop.longitude), parseFloat(stop.latitude)], "stop")
-                recalculateRoutes()
+                // recalculateRoutes()
             })
         }
         destinations.push({lat: parseFloat(route.endPoint.latitude), lng: parseFloat(route.endPoint.longitude)})
