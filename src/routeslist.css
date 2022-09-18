@@ -138,6 +138,9 @@ input:focus {
   display: flex;
   flex-direction: column;
   background-color: #cfd2cf66;
+  height: 300px;
+  overflow-y: scroll;
+  border-radius: 0 0 12px 12px;
 }
 
 .routelist_mainlist_each_row {
@@ -186,7 +189,7 @@ input:focus {
 }
 
 .modal .modal-head {
-  padding: 14px 28px;
+  padding: 28px;
   color: #333;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -213,15 +216,15 @@ input:focus {
 }
 
 .modal-body {
-  padding: 40px 24px 0;
+  padding: 16px 24px 0;
   min-width: 800px;
 }
 
 .modal-main .btn-close {
   position: absolute;
   font-size: 16px;
-  top: 8px;
-  right: 10px;
+  top: 28px;
+  right: 20px;
   cursor: pointer;
   color: #000;
 }
@@ -383,6 +386,7 @@ input:focus {
   padding: 6px 8px;
   margin-top: 4px;
   margin-left: 4px;
+  width: 164px;
 }
 
 .editing_stop input:focus {
@@ -481,4 +485,9 @@ input:focus {
 
 .no_list_message {
   margin-top: 24px;
+}
+
+.editing_stop_name, .editing_stop_lat, .editing_stop_long {
+  display: flex;
+  align-items: center;
 }

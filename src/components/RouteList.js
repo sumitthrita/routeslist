@@ -28,7 +28,7 @@ const RouteList = props => {
 
     const dispatch = useDispatch()
 
-    const header = ["Name", "Start", "Destination", "No. of Stops", "View on Map", "Edit", "Delete"]
+    const header = ["Name", "Origin", "Destination", "No. of Stops", "View on Map", "Edit", "Delete"]
 
     const handleInput = value => {
         setSearchString(value);

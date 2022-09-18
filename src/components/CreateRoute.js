@@ -199,7 +199,7 @@ const CreateRoute = props => {
                     }
                 </div>
                 <div className='each_item'>
-                    <label>Start Point  <span>*</span> </label>
+                    <label>Origin<span>*</span> </label>
                     {editable ? 
                         <div className='each_item_two_inputs'>
                             <div className='each_item_two_inputs_each' >
@@ -216,7 +216,7 @@ const CreateRoute = props => {
                     }
                 </div>
                 <div className='each_item'>
-                    <label>Destination Point  <span>*</span> </label>
+                    <label>Destination<span>*</span> </label>
                     {editable ? 
                         <div className='each_item_two_inputs'>
                             <div className='each_item_two_inputs_each' >
