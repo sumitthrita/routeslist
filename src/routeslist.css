@@ -1,0 +1,524 @@
+.routeslist {
+  /* padding: 0 60px; */
+}
+
+input, textarea {
+  border: 1px solid #FFF;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  line-height: 22px;
+  font-size: 14px;
+  color: #727890;
+  letter-spacing: 0.4px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+.homepage {
+
+}
+
+.header {
+  padding: 20px 60px;
+  background-color: #F5EDDC;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title_project {
+  font-size: 28px;
+  color: #000;
+  font-weight: 600;
+}
+
+.create_button {
+  display: flex;
+  align-items: center;
+  border: 1px solid #CFD2CF;
+  background-color: #FA9494;
+  /* border: 1px solid #FA9494; */
+  /* background-color: #CFD2CF; */
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;;
+}
+
+.create_button svg {
+  color: #fff;
+  font-size: 20px;
+}
+
+.create_button_text {
+  margin-left: 12px;
+  font-size: 20px;
+  color: #FFF;
+  font-weight: 500;
+}
+
+.routelist {
+  padding: 20px 60px;
+}
+
+.searchbar {
+  border: 2px solid #FA9494;
+  padding: 0 12px;
+  width: fit-content;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar input {
+  margin: 0 4px;
+  width: 204px;
+}
+
+.searchbar input:focus {
+  outline: none;
+}
+
+.routelist_box {
+  margin-top: 24px;
+}
+
+.routelist_header {
+  background-color:#F5EDDC;
+  display: flex;
+  padding: 12px 0;
+  border-radius: 12px 12px 0 0;
+}
+
+.header_row_each {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #000;
+  margin-right: 8px;
+}
+
+.header_row_each:nth-child(1){
+  margin-left: 8px;
+}
+
+.each_row_0 {
+  width: 320px;
+}
+
+.each_row_1, .each_row_2 {
+  width: 200px;
+  text-align: center;
+}
+
+.each_row_3 {
+  width: 182px;
+  text-align: center;
+}
+
+.each_row_4 {
+  width: 156px;
+  text-align: center;
+}
+
+.each_row_5 {
+  width: 84px;
+  text-align: center;
+}
+
+.each_row_6 {
+  width: 102px;
+  text-align: center;
+}
+
+.routelist_mainlist {
+  display: flex;
+  flex-direction: column;
+  background-color: #cfd2cf66;
+  height: 300px;
+  overflow-y: scroll;
+  border-radius: 0 0 12px 12px;
+}
+
+.routelist_mainlist_each_row {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.routelist_each_row_item {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+  margin-right: 8px;
+  color: #000;
+  font-weight: 500;
+}
+
+.routelist_each_row_item:nth-child(1) {
+  margin-left: 8px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(75, 85, 103, 0.514);
+  z-index: 99999999999;
+  backdrop-filter: blur(10px);
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px #616671;
+  max-height: 90%;
+  overflow: auto;
+  padding-bottom: 50px;
+  min-width: 400px;
+}
+
+.modal .modal-head {
+  padding: 28px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  word-spacing: 0.8px;
+  letter-spacing: 0.3px;
+  border-radius: 3px 3px 0px 0px;
+  text-align: left;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal .modal-head h3 {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.modal .modal-head button {
+  margin-right: 6px;
+}
+
+.modal-body {
+  padding: 16px 24px 0;
+  min-width: 800px;
+}
+
+.modal-main .btn-close {
+  position: absolute;
+  font-size: 16px;
+  top: 28px;
+  right: 20px;
+  cursor: pointer;
+  color: #000;
+}
+
+.modal-main .btn-close svg {
+  height: 24px;
+  width: 24px;
+}
+
+.btn-wrapper button.btn-default {
+  /* border: 1px solid #FA9494; */
+  border: 2px solid #CFD2CF;
+  background-color: #FA9494;
+  border-radius: 12px;
+  padding: 8px 12px;
+  /* background-color: #CFD2CF; */
+  color: #FFF;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.inputrow_one {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.inputrow_one:nth-child(1) {
+  margin-top: 0;
+}
+
+.each_item label {
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.each_item label span {
+  color: red;
+}
+
+.each_item .each_item_value {
+  color: #333;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.stops_section {
+  margin-top: 28px;
+  background-color: #F5EDDC;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.stops_section_heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.added_stops {
+  display: flex;
+  margin-top: 8px;
+  flex-direction: column;
+}
+
+.each_added_stop {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  justify-content: space-between;
+}
+
+.stop_content_section {
+  display: flex;
+}
+
+.stop_button_section {
+  display: flex;
+}
+
+.each_added_stop_name {
+  color: #333;
+  font-size: 14px;
+}
+
+.each_added_stop span {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.each_added_stop_lat {
+  margin-left: 16px;
+}
+
+.each_added_stop_long {
+  margin-left: 16px;
+}
+
+.create_routes_button_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 36px;
+}
+
+.each_item input {
+  border: 1px solid #CFD2CF;
+  padding: 6px 8px;
+  margin-top: 4px;
+}
+
+.each_item input:focus {
+  border: 1px solid #FA9494;
+}
+
+.each_item_two_inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputrow_one .each_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.each_item_two_inputs_each {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.each_item_two_inputs_each input {
+  margin-left: 12px;
+}
+
+.each_item_two_inputs_each input:nth-child(1) {
+  margin-left: 16px;
+}
+
+.editing_stop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.editing_stop label {
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.editing_stop input {
+  border: 1px solid #CFD2CF;
+  padding: 6px 8px;
+  margin-top: 4px;
+  margin-left: 4px;
+  width: 164px;
+}
+
+.editing_stop input:focus {
+  border: 1px solid #FA9494;
+}
+
+.stop_button_section .edit_button {
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.stop_button_section .edit_button svg {
+  color: #000;
+}
+
+.stop_button_section .delete_button {
+  cursor: pointer;
+}
+
+.stop_button_section .delete_button svg {
+  color: #EB1D36;
+}
+
+.Toastify .Toastify__toast-container--top-center {
+  margin-left: -130px;
+}
+
+.Toastify .Toastify__toast-container {
+  width: 260px;
+  position: fixed;
+  z-index: 999999999999;
+  /* position: fixed;
+  z-index: 999999; */
+}
+
+.Toastify .Toastify__toast {
+  line-height: 19px;
+  padding: 17px 20px 20px;
+  border-radius: 2px;
+}
+
+.Toastify .Toastify__toast .Toastify__close-button {
+  color: white;
+}
+
+.Toastify__toast.Toastify__toast--success {
+  min-height: 10px;
+  padding: 8px 22px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  background: #26c630;
+}
+
+.Toastify__progress-bar.Toastify__progress-bar--success.msg-appoint {
+  background: #12af1c;
+}
+
+.Toastify__toast.Toastify__toast--success svg.fa-check {
+  position: relative;
+  top: 1px;
+  margin-right: 7px;
+}
+
+.Toastify button.Toastify__close-button.Toastify__close-button--success {
+  color: white;
+  opacity: 0.4;
+}
+
+.routelist_each_row_item.each_row_0, .routelist_each_row_item.each_row_4, .routelist_each_row_item.each_row_5, .routelist_each_row_item.each_row_6 {
+  cursor: pointer;
+}
+
+.routelist_each_row_item.each_row_6 svg{
+  color: #EB1D36;
+}
+
+.routelist_each_row_item.each_row_4 svg {
+  color: #FA9494;
+}
+
+.noStopMessage span {
+  color: #EB1D36;
+}
+
+.added_stops .btn-wrapper  {
+  margin-top: 12px;
+}
+
+.no_list_message span {
+  cursor: pointer;
+  color: #EB1D36;
+}
+
+.no_list_message {
+  margin-top: 24px;
+}
+
+.editing_stop_name, .editing_stop_lat, .editing_stop_long {
+  display: flex;
+  align-items: center;
+}
+
+.newMaps {
+  height: 500px;
+}
+
+.mapMarker {
+  background-size: cover;
+  width: 10px;
+  height: 10px;
+  background-color: yellow;
+  border-radius: 100%;
+  border: 3px solid darkslategray;
+  transform: translate(0,0);
+}
+
+.mapStopMarker {
+  width: 5px;
+  height: 5px;
+  background-color: yellow;
+  border-radius: 100%;
+  border: 2px solid red;
+}
+
+.mapDestinationMarker {
+  background-size: cover;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 100%;
+  border: 3px solid red;
+}
