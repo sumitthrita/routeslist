@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import * as tt from '@tomtom-international/web-sdk-maps';
 import * as ttapi from '@tomtom-international/web-sdk-services';
-import { Link, useLocation } from 'react-router-dom';
 import '@tomtom-international/web-sdk-maps/dist/maps.css'
 
 
@@ -9,16 +8,6 @@ const Map = props => {
     const route = props.route
     const mapElement = useRef()
     const [map, setMap] = useState({})
-
-
-    const convertToPoints = (lngLat) => {
-        return {
-            point: {
-                latitude: lngLat.lat,
-                longitude: lngLat.lng
-            }
-        }
-    }
 
     const drawRoute = (geoJson, map) => {
         if(map.getLayer('route')){
@@ -139,10 +128,7 @@ const Map = props => {
     return (
         map && 
             <div>
-                {/* <div className='goBack' >
-                    <Link to="/routeslist" >Go Back</Link>
-                </div> */}
-            <div ref={mapElement} className="newMaps" />
+                <div ref={mapElement} className="newMaps" />
             </div>
     )
 }

@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteRoute, showGeneralModalAction } from '../Redux/action';
+import AllRoutesMap from './AllRoutesMap';
+import Button from './Button';
 import CreateRoute from './CreateRoute';
 import Map from './Map';
 
@@ -94,6 +96,17 @@ const RouteList = props => {
         dispatch(showGeneralModalAction(toSend))
     }
 
+    const showAllRoutesOnMap = () => {
+        let component = <AllRoutesMap routes={prevRoutes} />
+        const toSend = {
+            component, 
+            title: "All Routes",
+            showModal: true,
+            handleClose: closeModal
+          }
+        dispatch(showGeneralModalAction(toSend))
+    } 
+
     const closeModal = () => {
         const toSend = {
             showModal: false
@@ -108,15 +121,22 @@ const RouteList = props => {
 
     return (
         <div className='routelist'>
-            {prevRoutes?.length > 0 && <div className='searchbar'>
-                <FontAwesomeIcon icon={faSearch} />
-                <input
-                    type="text"
-                    placeholder="Search for route name"
-                    value = {searchString}
-                    onChange={(e) => handleInput(e.target.value)}
-                />
-            </div>}
+            {prevRoutes?.length > 0 && 
+                <div className='routelist_head'>
+                    <div className='searchbar'>
+                        <FontAwesomeIcon icon={faSearch} />
+                        <input
+                            type="text"
+                            placeholder="Search for route name"
+                            value = {searchString}
+                            onChange={(e) => handleInput(e.target.value)}
+                        />
+                    </div>
+                    {searchString === "" &&
+                        <Button label="Show All Routes On Map" handleMe={showAllRoutesOnMap} />
+                    }
+                </div>
+            }
             {routesToShow?.length > 0 ? 
                 <div className='routelist_box'>
                     <div className='routelist_header'>
