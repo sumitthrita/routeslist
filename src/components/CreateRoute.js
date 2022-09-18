@@ -93,7 +93,7 @@ const CreateRoute = props => {
         if(route.name !== "" && route.startPoint.latitude !=="" && route.startPoint.longitude !== ""
             && route.endPoint.latitude !== "" && route.endPoint.longitude !== ""
         ) { 
-            if(route.stops[route.stops.length-1].name !== "" && route.stops[route.stops.length-1].latitude !== "" && route.stops[route.stops.length-1].longitude !== ""){
+            if(route.stops.length > 0 && route.stops[route.stops.length-1].name !== "" && route.stops[route.stops.length-1].latitude !== "" && route.stops[route.stops.length-1].longitude !== ""){
                 route.stops = route.stops;
             } else {
                 route.stops = []

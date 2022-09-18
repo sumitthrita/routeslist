@@ -497,22 +497,21 @@ input:focus {
 }
 
 .mapMarker {
-  background-image: url('https://i.imgur.com/oz3r3Wq.png');
   background-size: cover;
-  width: 22px;
-  height: 22px;
+  width: 10px;
+  height: 10px;
   background-color: yellow;
-  border-radius: 11px;
+  border-radius: 100%;
   border: 3px solid darkslategray;
   transform: translate(0,0);
 }
 
 .mapStopMarker {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   background-color: yellow;
-  border-radius: 8px;
-  border: 3px solid red;
+  border-radius: 100%;
+  border: 2px solid red;
 }
 
 .mapDestinationMarker {
